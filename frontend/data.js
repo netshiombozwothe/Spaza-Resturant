@@ -1,37 +1,37 @@
 
-export const OrderList = [
+export const orderList = [
     {
-        image: "",
+        itemImage: "/images/burger.jfif",
         itemName : "Burger",
         itemPrice: 30
     },
     {
-        image: "",
+        itemImage: "",
         itemName : "Croissant",
         itemPrice: 30
     },
     {
-        image: "",
+        itemImage: "",
         itemName : "Bunny Chow",
         itemPrice: 30
     },
     {
-        image: "",
+        itemImage: "",
         itemName : "Pasta",
         itemPrice: 30
     },
     {
-        image: "",
+        itemImage: "/images/chicken.jfif",
         itemName : "Full Chicken",
         itemPrice: 30
     },
     {
-        image: "",
+        itemImage: "",
         itemName : "BraaiWors",
         itemPrice: 30
     },
     {
-        image: "",
+        itemImage: "",
         itemName : "Hotdog",
         itemPrice: 30
     },
