@@ -1,28 +1,33 @@
-import {OrderList} from '/frontend/data.js'
-    document.getElementById('ListForm').innerHTML = OrderList;
+import {orderList} from '/frontend/data.js'
 
-
-const ItemImage =  document.getElementById('ItemImage');
-const ItemName = document.getElementById('ItemName');
-const ItemPrice = document.getElementById('ItemPrice');
-const SubmitOrder = document.getElementById('SubmitOrder');
+const ItemImage =  document.getElementById('itemImage');
+const ItemName = document.getElementById('itemName');
+const ItemPrice = document.getElementById('itemPrice');
+const submitOrder = document.getElementById('submitOrder');
 
 function listOrderItems(){
-    let OrderListHTML = "";
-    for(let i=0;i<OrderList.length;i++){
+    let orderListHTML = "";
+    for(let i=0;i<orderList.length;i++){
 
-       OrderListHTML += `
+       orderListHTML += `
        <form class="form">
-            <h3><img src="" alt="" id="ItemImage"></td>
-            <h3 class="ItemName" id="ItemName">${OrderList[i].itemName}</h3>
-            <h3 class="ItemPrice" id="ItemPrice">${OrderList[i].itemPrice}</h3>
-            <button type="Submit" class="SubmitOrder" id="SubmitOrder">Add to Cart</button>
-        <form>`
+            <img src="${orderList[i].itemImage}" alt="" id="itemImage" class="itemImage" width=70%>
+        <div class="itemDescription">
+            <h3 class="itemName" id="itemName">${orderList[i].itemName}</h3>
+            <h3 class="itemPrice" id="itemPrice">R${orderList[i].itemPrice}</h3>
+            <button type="button" class="submitOrder" id="submitOrder" data-submit-order>Add to Cart</button>
+        </div>
+        </form>`
     }
-        document.getElementById('ListForm').innerHTML = OrderListHTML;
+        document.getElementById('listForm').innerHTML = orderListHTML;
 
 }
 listOrderItems()
-//document.addEventListener('Click', finction(e)){
-    //if(e.target.dataset.)
-//}
+document.addEventListener('click', function(event){
+    if(event.target.dataset.submitOrder !== undefined){
+    listOrderCart(event.target)
+}
+})
+function listOrderCart(button){
+    button.textContent = "i was pressed"
+}
