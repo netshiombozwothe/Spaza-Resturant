@@ -1,0 +1,19 @@
+Body{
+    background: pink;
+    margin: 0;
+    color: white;
+}
+header, .nav{
+    display:flex
+}
+header{
+    background: blue;
+    padding: 0;
+    line-height: 2px;
+}
+.nav{
+    border: solid green 2px;
+    margin: 0 auto;
+    gap: 0.5em;
+    padding-top: 1.5em;
+}

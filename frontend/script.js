@@ -12,12 +12,14 @@ function listOrderItems(){
     for(let i=0;i<OrderList.length;i++){
 
        OrderListHTML += `
-       <form>
-            <img src="" alt="" id="ItemImage">
+       <tr>
+       <td class="form">
+            <h3><img src="" alt="" id="ItemImage"></td>
             <h3 class="ItemName" id="ItemName">${OrderList[i].itemName}</h3>
             <h3 class="ItemPrice" id="ItemPrice">${OrderList[i].itemPrice}</h3>
             <button type="Submit" class="SubmitOrder" id="SubmitOrder">Add to Cart</button>
-        </form>`
+        <td>
+        </tr>`
     }
         document.getElementById('ListForm').innerHTML = OrderListHTML;
 
